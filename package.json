@@ -1,5 +1,27 @@
 {
   "devDependencies": {
-    "supabase": "^3.2.0"
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "pg": "^8.23.1",
+    "supabase": "^3.2.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "name": "velouvi-lite",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 3000",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "db:setup-demo": "node scripts/setup-demo.mjs",
+    "test:booking-races": "node tests/booking-races.mjs",
+    "test:db": "node scripts/check-database.mjs"
   }
 }
